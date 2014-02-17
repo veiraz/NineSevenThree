@@ -1,0 +1,190 @@
+/*!
+    @description    NineSevenThree Grid System
+    @author         Resi Respati <https://twitter.com/resir014>
+    @version        0.3
+*/
+
+
+/** Base Styles
+    ========================================================================== */
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+/**
+    Typography
+
+    Base typography elements.
+*/
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #222222;
+    background-color: #ffffff;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 300;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    line-height: 1.1;
+}
+
+h1, h2, h3 {
+    margin: 20px 0 10px;
+}
+
+h4, h5, h6 {
+    margin: 10px 0;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-weight: normal;
+    color: #6f6f6f;
+    line-height: 0;
+}
+
+h1 small, h2 small, h3 small {
+    font-size: 60%;
+}
+
+h4 small, h5 small, h6 small {
+    font-size: 75%;
+}
+
+h1, .h1 {
+    font-size: 36px;
+}
+
+h2, .h2 {
+    font-size: 30px;
+}
+
+h3, .h3 {
+    font-size: 24px;
+}
+
+h4, .h4 {
+    font-size: 18px;
+}
+
+h5, .h5 {
+    font-size: 14px;
+}
+
+h6, .h6 {
+    font-size: 12px;
+}
+
+p {
+    margin: 0 0 10px;
+    text-rendering: optimizeLegibility;
+}
+
+a, a:hover, a:focus {
+    color: #0099cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+    
+/**
+    Grid Layouts
+*/
+
+.container {
+    margin: 0 auto;
+    max-width: 973px;
+    width: 90%;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+ 
+.clearfix:after {
+    clear: both;
+}
+ 
+.clearfix {
+    *zoom: 1;
+}
+
+.row {
+  overflow: hidden;
+}
+
+.column {
+    float: left;
+    margin-left: 5%;
+}
+ 
+.column:first-child {
+    margin-left: 0;
+}
+
+.column.full {
+    width: 100%;
+}
+  
+.column.two-thirds {
+    width: 65%;
+}
+  
+.column.half {
+    width: 47.5%;
+}
+ 
+.column.one-third {
+    width: 30%;
+}
+ 
+.column.one-fourth {
+    width: 21.25%;
+}
+
+@media screen and (max-width: 640px) {
+    .column.full,
+    .column.two-thirds,
+    .column.half,
+    .column.one-third,
+    .column.one-fourth {
+        margin: 0;
+        width: 100%;
+    }
+}
