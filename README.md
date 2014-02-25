@@ -9,7 +9,7 @@ It's still in early stage, and more things will be added in the future. In the m
 ## Features
 
 * Basic UI & typography elements. Nothing fancy, just everything you need as a base for your web designing projects.
-* Responsive, fluid, 12-column grid system with a simple class system.
+* Responsive, fluid, 12-column grids with a simple class system.
 * Uses [Normalize.css](http://git.io/normalize)
 
 ## License
