@@ -1,11 +1,11 @@
 /*!
     @description    NineSevenThree Grid System
     @author         Resi Respati <https://twitter.com/resir014>
-    @version        0.3
+    @version        0.4
 */
 
 
-/** Base Styles
+/** Base Framework
     ========================================================================== */
 
 *, *:before, *:after {
@@ -19,18 +19,68 @@ html, body {
     margin: 0;
 }
 
-.pull-left {
-    float: left;
+.pull-right {
+    float: right !important;
 }
 
-.pull-right {
-    float: right;
+.pull-left {
+    float: left !important;
 }
+
+/**
+    Fluid Grids
+*/
+
+.container {
+    margin: 0 auto;
+    max-width: 973px;
+    width: 90%;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.row:before,
+.row:after {
+    display: table;
+    content: " ";
+}
+
+.row:after {
+    clear: both;
+}
+
+@media (max-width: 640px) {
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 640px) {
+    .column {
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+  
+    .column.twelve { width: 100%; }
+    .column.eight { width: 66.7%; }
+    .column.six { width: 50%; }
+    .column.four { width: 33.3%; }
+    .column.three { width: 24.95%; }
+    .column.push { float: right; }  
+}
+
+/** Standard UI Elements
+    ========================================================================== */
 
 /**
     Typography
 
-    Base typography elements.
+    Base typography structures.
 */
 
 body {
@@ -118,72 +168,4 @@ a, a:hover, a:focus {
 
 a:hover {
     text-decoration: underline;
-}
-    
-/**
-    Grid Layouts
-*/
-
-.container {
-    margin: 0 auto;
-    max-width: 973px;
-    width: 90%;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
- 
-.clearfix:after {
-    clear: both;
-}
- 
-.clearfix {
-    *zoom: 1;
-}
-
-.row {
-  overflow: hidden;
-}
-
-.column {
-    float: left;
-    margin-left: 5%;
-}
- 
-.column:first-child {
-    margin-left: 0;
-}
-
-.column.full {
-    width: 100%;
-}
-  
-.column.two-thirds {
-    width: 65%;
-}
-  
-.column.half {
-    width: 47.5%;
-}
- 
-.column.one-third {
-    width: 30%;
-}
- 
-.column.one-fourth {
-    width: 21.25%;
-}
-
-@media screen and (max-width: 640px) {
-    .column.full,
-    .column.two-thirds,
-    .column.half,
-    .column.one-third,
-    .column.one-fourth {
-        margin: 0;
-        width: 100%;
-    }
 }

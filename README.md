@@ -2,12 +2,14 @@
 
 NineSevenThree is a simplified, responsive CSS grid framework. It's originally a base framework designed for my future web projects, but I have decided to add some stuffs and release it for public use.
 
-It's still in early stage, so some things might still be missing.
+It's still in early stage, and more things will be added in the future. In the meantime, feel free to use, fork and expand at your own risk.
+
+**Current version:** 0.4
 
 ## Features
 
-* Basic UI & typography elements.
-* Responsive and variable grid widths including one-fourths, one-thirds and half of the container size.
+* Basic UI & typography elements. Nothing fancy, just everything you need as a base for your web designing projects.
+* Responsive, fluid, 12-column grid system with a simple class system.
 * Uses [Normalize.css](http://git.io/normalize)
 
 ## License

@@ -52,10 +52,10 @@
                 <h5>h5. Heading <small>Subheading</small></h5>
                 <h6>h6. Heading <small>Subheading</small></h6>
                 
-                <h3>Other Elements</h3>
+                <h3>Other Elements (experimental)</h3>
                 
                 <div class="alert alert-warning">
-                    <strong>Note:</strong> So far only grid and typography elements are fully incorporated into the framework. The following elements are custom-built for demonstration purposes. Some of them might be incorporated into the actual framework, but, well, who knows.
+                    <strong>Note:</strong> So far only grid and typography elements are fully incorporated into the framework. The following elements are custom-built for experimental purposes. Some of them might be incorporated into the actual framework, but, well, who knows.
                 </div>
                 
                 <p>Here is a <a href="http://www.youtube.com/watch?v=ceJ_DeT-c3M" target="_blank">link</a> to a random video found on the interwebs.</p>
@@ -79,61 +79,91 @@ print "This is a code block written in the pre element"</pre>
             <div class="container">
                 <h2>Grid Layouts</h2>
                 
-                <div class="row clearfix">
-                    <div class="column full">
-                        <span>.column .full</span>
+                <p>Standard, fluid responsive layouts. More columns will be added.</p>
+                
+                <div class="row griddemo">
+                    <div class="column twelve">
+                        <span>.column.twelve</span>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="column two-thirds">
-                        <span>.column .two-thirds</span>
+                <div class="row griddemo">
+                    <div class="column eight">
+                        <span>.column.eight</span>
                     </div>
 
-                    <div class="column one-third">
-                        <span>.column .one-third</span>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="column half">
-                        <span>.column .half</span>
-                    </div>
-
-                    <div class="column half">
-                        <span>.column .half</span>
+                    <div class="column four">
+                        <span>.column.four</span>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="column one-third">
-                        <span>.column .one-third</span>
+                <div class="row griddemo">
+                    <div class="column six">
+                        <span>.column.six</span>
                     </div>
 
-                    <div class="column one-third">
-                        <span>.column .one-third</span>
-                    </div>
-
-                    <div class="column one-third">
-                        <span>.column .one-third</span>
+                    <div class="column six">
+                        <span>.column.six</span>
                     </div>
                 </div>
 
+                <div class="row griddemo">
+                    <div class="column four">
+                        <span>.column.four</span>
+                    </div>
+
+                    <div class="column four">
+                        <span>.column.four</span>
+                    </div>
+
+                    <div class="column four">
+                        <span>.column.four</span>
+                    </div>
+                </div>
+
+                <div class="row griddemo">
+                    <div class="column three">
+                        <span>.column.three</span>
+                    </div>
+
+                    <div class="column three">
+                        <span>.column.three</span>
+                    </div>
+
+                    <div class="column three">
+                        <span>.column.three</span>
+                    </div>
+
+                    <div class="column three">
+                        <span>.column.three</span>
+                    </div>
+                </div>
+                
+                <h3>Pushing a column</h3>
+                
+                <p>Pushing a column switches the position of the grid without sacrificing HTML hierarchy.</p>
+                
+                <div class="row griddemo">
+                    <div class="column eight push">
+                        <span>.column.eight with .push</span>
+                    </div>
+                    <div class="column four">
+                        <span>.column.four</span>
+                    </div>
+                </div>
+                
+                <h3>Application</h3>
+                
                 <div class="row">
-                    <div class="column one-fourth">
-                        <span>.column .one-fourth</span>
+                    <div class="column four">
+                        <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.</p>
+                        <p>Boudin aliqua adipisicing rump corned beef. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
                     </div>
-
-                    <div class="column one-fourth">
-                        <span>.column .one-fourth</span>
+                    <div class="column four">
+                        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
                     </div>
-
-                    <div class="column one-fourth">
-                        <span>.column .one-fourth</span>
-                    </div>
-
-                    <div class="column one-fourth">
-                        <span>.column .one-fourth</span>
+                    <div class="column four">
+                        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
                     </div>
                 </div>
             </div>
