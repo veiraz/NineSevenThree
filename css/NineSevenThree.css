@@ -95,7 +95,8 @@ html, body {
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 1.42857143;
+    text-rendering: optimizeLegibility;
     color: #222222;
     background-color: #ffffff;
 }
@@ -115,7 +116,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
     font-style: normal;
-    text-rendering: optimizeLegibility;
     line-height: 1.1;
 }
 
@@ -167,14 +167,14 @@ h6 {
 
 p {
     margin: 0 0 10px;
-    text-rendering: optimizeLegibility;
 }
 
-a, a:hover, a:focus {
+a {
     color: #0099cc;
     text-decoration: none;
 }
 
-a:hover {
+a:hover, a:focus {
+    color: #428bca;
     text-decoration: underline;
 }
