@@ -4,7 +4,7 @@ NineSevenThree is a simplified, responsive CSS grid framework. It's originally a
 
 It's still in early stage, and more things will be added in the future. In the meantime, feel free to use, fork and expand at your own risk.
 
-**Current version:** [0.4.3](https://github.com/resir014/NineSevenThree/releases)
+**Current version:** [0.4.4](https://github.com/resir014/NineSevenThree/releases)
 
 ## Features
 

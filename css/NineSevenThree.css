@@ -1,7 +1,7 @@
 /*!
     @description    NineSevenThree Grid System
     @author         Resi Respati <https://twitter.com/resir014>
-    @version        0.4.3
+    @version        0.4.4
 */
 
 
@@ -75,7 +75,7 @@ html, body {
     .col-3 { width: 25%; }
     .col-2 { width: 16.67%; }
     .col-1 { width: 8.33%; }
-    
+
     .push { float: right; }
 }
 
