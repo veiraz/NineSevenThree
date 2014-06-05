@@ -19,7 +19,7 @@ NineSevenThree uses Grunt for building and testing CSS files.
 ### Requirements
 
 * node.js v0.10.x - [Instructions](http://nodejs.org/download/)
-* Jekyll v0.10.x - [Instructions](http://jekyllrb.com/docs/installation/)
+* Jekyll v1.5.x - [Instructions](http://jekyllrb.com/docs/installation/)
 
 ### Instructions
 
