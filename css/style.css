@@ -12,9 +12,9 @@
 */
 
 #intro {
-  background-color: #222222;
-  color: #ffffff;
   padding: 20px 0;
+  color: #fff;
+  background-color: #222;
 }
 
 #intro h1, #intro h2, #intro h3, #intro p {
@@ -53,17 +53,17 @@
 pre {
   padding: 10px;
   margin: 0 0 20px;
-  background-color: #eeeeee;
+  background-color: #eee;
+  border: 1px solid #ddd;
   border-radius: 5px;
-  border: 1px solid #dddddd;
 }
 
 code {
+  padding: 2px;
   vertical-align: baseline;
-  padding: 2px;
-  background-color: #eeeeee;
+  background-color: #eee;
+  border: 1px solid #ddd;
   border-radius: 2px;
-  border: 1px solid #dddddd;
 }
 
 /* Blockquote */
@@ -100,9 +100,9 @@ blockquote footer:before {
 }
 
 .alert-warning {
+  color: #8a6d3b;
   background-color: #fcf8e3;
   border-color: #faebcc;
-  color: #8a6d3b;
 }
 
 /**
@@ -110,9 +110,9 @@ blockquote footer:before {
 */
 
 #footer {
-  border-top: 1px solid #222222;
-  margin-top: 40px;
   padding: 20px 0;
+  margin-top: 40px;
+  border-top: 1px solid #222;
 }
 
 #footer p {
