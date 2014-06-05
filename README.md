@@ -25,7 +25,7 @@ NineSevenThree uses Grunt for building and testing CSS files.
 
 * Install Grunt with `npm install -g grunt-cli`.
 * Navigate to the root `NineSevenThree` directory, then run `npm install`. This will automatically install the required Node packages for building the files.
-* Work on the CSS files inside the `_src` folder, then run `grunt test` to build a test CSS file.
+* Work on the CSS files inside the `_src` folder, then run `grunt` or `grunt test` to build a test CSS file.
 
 ## License
 

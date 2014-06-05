@@ -18,15 +18,20 @@ module.exports = function(grunt) {
     concat: {
       options: {
         stripBanners: false,
-        banner: '/*! <%= pkg.name %> | v<%= pkg.version %> | <%= grunt.template.today("yyyy-mm-dd") %> */\n\n',
       },
       dist: {
         src: ['css/_src/normalize.css', 'css/_src/*.css'],
-        dest: 'dist/css/nineseventhree.css'
+        dest: 'dist/css/nineseventhree.css',
+        options: {
+          banner: '/*! <%= pkg.name %> | v<%= pkg.version %> | <%= grunt.template.today("yyyy-mm-dd") %> */\n\n',
+        }
       },
       test: {
         src: ['css/_src/libs/*.css', 'css/_src/*.css'],
-        dest: 'css/nineseventhree.css'
+        dest: 'css/nineseventhree.css',
+        options: {
+          banner: '/*! <%= pkg.name %> | test build | <%= grunt.template.today("yyyy-mm-dd") %> */\n\n',
+        }
       }
     },
     csscomb: {
@@ -88,10 +93,9 @@ module.exports = function(grunt) {
   });
 
   // register custom grunt tasks
-  grunt.registerTask('dist', ['concat:dist', 'csscomb:dist', 'cssmin']);
   grunt.registerTask('test', ['concat:test', 'csscomb:test']);
-
+  grunt.registerTask('dist', ['concat:dist', 'csscomb:dist', 'cssmin']);
   grunt.registerTask('int', ['test', 'shell:jekyllBuild']);
 
-  grunt.registerTask('default', ['dist', 'shell:jekyllBuild']);
+  grunt.registerTask('default', ['test']);
 };
