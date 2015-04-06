@@ -1,4 +1,4 @@
-/*! NineSevenThree | test build | 2014-06-05 */
+/*! NineSevenThree | test build | 2015-04-06 */
 
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 
@@ -534,13 +534,13 @@ html, body {
  */
 
 .container {
-  max-width: 973px;
-  padding: 0 15px;
+  max-width: 48rem;
+  padding: 0 1rem;
   margin: 0 auto;
 }
 
 .row {
-  margin: 0 -15px;
+  margin: 0 -1rem;
 }
 
 .row:before,
@@ -556,11 +556,11 @@ html, body {
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
   position: relative;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 36rem) {
   .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
     float: left;
   }
@@ -626,7 +626,7 @@ html, body {
  */
 
 .btn {
-  display: inline-block;
+  display: inline-block;
   padding: 8px 16px;
   font-size: 16px;
   font-weight: 400;
@@ -841,59 +841,47 @@ body {
 /* Headings */
 
 h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5rem;
   font-style: normal;
-  font-weight: 300;
+  font-weight: normal;
   line-height: 1.1;
 }
-
-h1, h2, h3 {
-  margin: 20px 0 10px;
+h1 {
+  font-size: 2.5rem;
 }
-
-h4, h5, h6 {
-  margin: 10px 0;
+h2 {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+h3 {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+}
+h4 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+h5 {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+}
+h6 {
+  margin-top: 1rem;
+  font-size: 1rem;
 }
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  font-size: 65%;
   font-weight: normal;
   line-height: 0;
   color: #6f6f6f;
 }
 
-h1 small, h2 small, h3 small {
-  font-size: 65%;
-}
-
-h4 small, h5 small, h6 small {
-  font-size: 75%;
-}
-
-h1 {
-  font-size: 36px;
-}
-
-h2 {
-  font-size: 30px;
-}
-
-h3 {
-  font-size: 24px;
-}
-
-h4 {
-  font-size: 18px;
-}
-
-h5 {
-  font-size: 14px;
-}
-
-h6 {
-  font-size: 12px;
-}
+/* Body text */
 
 p {
-  margin: 0 0 10px;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 /* Links */
