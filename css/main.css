@@ -222,7 +222,6 @@ th {
     color: #000 !important;
     text-shadow: none !important; 
     background: transparent !important;
-    /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
   }
 
@@ -239,10 +238,6 @@ th {
     content: " (" attr(title) ")";
   }
 
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
@@ -257,7 +252,6 @@ th {
 
   thead {
     display: table-header-group;
-    /* h5bp.com/t */
   }
 
   tr,
