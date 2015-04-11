@@ -18,6 +18,7 @@
   "rule-indent": 2,
   "space-after-colon": 1,
   "space-after-combinator": 1,
+  "space-after-selector-delimiter": "\n",
   "space-before-selector-delimiter": 0,
   "space-between-declarations": "\n",
   "space-after-opening-brace": "\n",
