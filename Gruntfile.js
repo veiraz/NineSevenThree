@@ -74,7 +74,8 @@ module.exports = function (grunt) {
     sass: {
       build: {
         options: {
-          sourcemap: "none"
+          sourcemap: "none",
+          unixNewlines: true
         },
         files: [{
           expand: true,
