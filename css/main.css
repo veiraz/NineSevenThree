@@ -102,8 +102,6 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-/* Grouping content
-   ========================================================================== */
 figure {
   margin: 1em 40px;
 }
