@@ -12,7 +12,7 @@
 }
 
 .row {
-  margin: 0 -($grid-gutter);
+  margin: 0 (-$grid-gutter);
   @include clearfix();
 }
 
