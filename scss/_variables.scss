@@ -1,0 +1,18 @@
+$container-width: 973px !default;
+$grid-gutter:     15px !default;
+
+// Primary colors
+$color-blue:       #268bd2 !default;
+$color-gray-light: #999    !default;
+$color-gray:       #666    !default;
+$color-gray-dark:  #222    !default;
+
+// Font stack
+$body-font: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+// The base body size
+$body-font-size: 14px !default;
+$line-height: 20/14;
+
+// Monospace font stack
+$mono-font: Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
