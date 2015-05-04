@@ -17,7 +17,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'css/main.css': '_scss/main.scss'
+          'css/main.css': 'scss/main.scss'
         }
       }
     },
@@ -39,8 +39,8 @@ module.exports = function (grunt) {
 
     watch: {
       sass: {
-        files: ['scss/**/*.scss', 'docs/docs.scss'],
-        tasks: ['sass', 'autoprefixer']
+        files: ['scss/**/*.scss', 'docs/**'],
+        tasks: ['default']
       }
     },
 
