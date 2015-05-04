@@ -1,118 +1,77 @@
 module.exports = function (grunt) {
   'use strict';
 
-  // load time-grunt and all grunt plugins found in the package.json
-  require('time-grunt')(grunt);
+  // load all grunt plugins found in the package.json
   require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
+    // package configuration
     pkg: grunt.file.readJSON('package.json'),
 
-    autoprefixer: {
-      build: {
-        files: [{
-          expand: true,
-          cwd: 'css/',
-          src: ['main.css'],
-          dest: 'css/'
-        }]
-      }
-    },
-
-    browserSync: {
-      serve: {
-        options: {
-          watchTask: true,
-          server: {
-            baseDir: '/'
-          }
-        },
-        bsFiles: {
-          src: [
-            '*.html',
-            '**/*.scss',
-            '**/*.css',
-            '**/*.js',
-            '**/*.png',
-            '**/*.jpg'
-          ]
+    // Sass compiling
+    sass: {
+      options: {
+        precision: 6,
+        sourceComments: false,
+        outputStyle: 'compressed'
+      },
+      dist: {
+        files: {
+          'css/main.css': '_scss/main.scss'
         }
       }
     },
 
-    clean: {
-      deploy: {
-        src: ['_gh_pages']
+    // vendor prefix handling
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions', 'ie 8', 'ie 9']
+      },
+      dist: {
+        src: 'css/*.css'
+      },
+      docs: {
+        src: '_site/*.css'
       }
     },
 
-    copy: {
-      deploy: {
-        files: [{
-          expand: true,
-          cwd: '/',
-          src: '**/*',
-          dest: '_gh_pages/'
-        }]
-      }
-    },
-
-    csscomb: {
-      build: {
-        options: {
-          config: '.csscomb.json'
-        },
-        files: [{
-          expand: true,
-          cwd: 'css/',
-          src: ['main.css'],
-          dest: 'css/'
-        }]
-      }
-    },
-
-    sass: {
-      build: {
-        options: {
-          sourcemap: "none",
-          unixNewlines: true
-        },
-        files: [{
-          expand: true,
-          cwd: '_scss/',
-          src: ['main.scss'],
-          dest: 'css/',
-          ext: '.css'
-        }]
-      }
-    },
+    // build tools
 
     watch: {
-      serve: {
-        files: [
-          '*.html',
-          '**/*.scss',
-          '**/*.css',
-          '**/*.js',
-          '**/*.png',
-          '**/*.jpg'
-        ],
-        tasks: ['build']
+      sass: {
+        files: ['scss/**/*.scss', 'docs/docs.scss'],
+        tasks: ['sass', 'autoprefixer']
+      }
+    },
+
+    jekyll: {
+      options: {
+        src: 'docs',
+        dest: '_site',
+        config: '_config.yml'
+      }
+    },
+
+    buildcontrol: {
+      options: {
+        dir: '_site',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:resir014/NineSevenThree.git',
+          branch: 'gh-pages'
+        }
       }
     }
 
   });
 
-  grunt.registerTask('build', [
-    'sass:build', 'autoprefixer:build', 'csscomb:build'
-  ]);
+  // builds the page contents
+  grunt.registerTask('default', ['sass', 'jekyll', 'autoprefixer:dist']);
 
-  // browsersync task
-  grunt.registerTask('serve', ['browserSync', 'watch']);
-
-  // deploy task
-  grunt.registerTask('deploy', ['build', 'clean:deploy', 'copy:deploy']);
-
-  // default task
-  grunt.registerTask('default', 'build');
+  // publishes to GitHub Pages
+  grunt.registerTask('publish', ['jekyll', 'autoprefixer:docs', 'buildcontrol:pages']);
 }
