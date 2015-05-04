@@ -47,8 +47,10 @@ module.exports = function (grunt) {
     jekyll: {
       options: {
         src: 'docs',
-        dest: '_site',
         config: '_config.yml'
+      },
+      docs: {
+        dest: '_site'
       }
     },
 
