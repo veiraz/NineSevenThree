@@ -1,101 +1,77 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   'use strict';
 
-  // force unix newlines
-  grunt.util.linefeed = '\n';
-
-  RegExp.quote = function(string) {
-    return string.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
-  };
-
-  // load time-grunt and all grunt plugins found in the package.json
-  require('time-grunt')(grunt);
+  // load all grunt plugins found in the package.json
   require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
+    // package configuration
     pkg: grunt.file.readJSON('package.json'),
 
-    concat: {
+    // Sass compiling
+    sass: {
       options: {
-        stripBanners: false,
+        precision: 6,
+        sourceComments: false,
+        outputStyle: 'compressed'
       },
       dist: {
-        src: ['css/_src/normalize.css', 'css/_src/*.css'],
-        dest: 'dist/css/nineseventhree.css',
-        options: {
-          banner: '/*! <%= pkg.name %> | v<%= pkg.version %> | <%= grunt.template.today("yyyy-mm-dd") %> */\n\n',
-        }
-      },
-      test: {
-        src: ['css/_src/libs/*.css', 'css/_src/*.css'],
-        dest: 'css/nineseventhree.css',
-        options: {
-          banner: '/*! <%= pkg.name %> | test build | <%= grunt.template.today("yyyy-mm-dd") %> */\n\n',
+        files: {
+          'css/main.css': '_scss/main.scss'
         }
       }
     },
-    csscomb: {
+
+    // vendor prefix handling
+    autoprefixer: {
       options: {
-        config: 'css/_src/.csscomb.json'
+        browsers: ['last 2 versions', 'ie 8', 'ie 9']
       },
       dist: {
-        expand: true,
-        cwd: 'dist/css/',
-        src: ['*.css', '!*.min.css'],
-        dest: 'dist/css/'
+        src: 'css/*.css'
       },
-      test: {
-        expand: true,
-        cwd: 'css/',
-        src: ['*.css', '!*.min.css'],
-        dest: 'css/'
+      docs: {
+        src: '_site/*.css'
       }
     },
 
-    cssmin: {
-      minify: {
-        expand: true,
-        cwd: 'dist/css/',
-        src: ['*.css', '!*.min.css'],
-        dest: 'dist/css/',
-        ext: '.min.css'
-      }
-    },
-
-    shell: {
-      jekyllBuild: {
-        command: 'jekyll build'
-      },
-      jekyllServe: {
-        command: 'jekyll serve'
-      }
-    },
+    // build tools
 
     watch: {
-      files: [
-        '_layouts/*.html',
-        '_posts/*.md',
-        '_drafts/*.md',
-        'css/*.css',
-        'css/_src/*.css',
-        '_config.yml',
-        'index.html',
-        '404.html'
-      ],
-      tasks : ['int'],
-      options : {
-        spawn : false,
-        interrupt : true,
-        atBegin : true,
-        livereload : true
+      sass: {
+        files: ['scss/**/*.scss', 'docs/docs.scss'],
+        tasks: ['sass', 'autoprefixer']
+      }
+    },
+
+    jekyll: {
+      options: {
+        src: 'docs',
+        dest: '_site',
+        config: '_config.yml'
+      }
+    },
+
+    buildcontrol: {
+      options: {
+        dir: '_site',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:resir014/NineSevenThree.git',
+          branch: 'gh-pages'
+        }
       }
     }
+
   });
 
-  // register custom grunt tasks
-  grunt.registerTask('test', ['concat:test', 'csscomb:test']);
-  grunt.registerTask('dist', ['concat:dist', 'csscomb:dist', 'cssmin']);
-  grunt.registerTask('int', ['test', 'shell:jekyllBuild']);
+  // builds the page contents
+  grunt.registerTask('default', ['sass', 'jekyll', 'autoprefixer:dist']);
 
-  grunt.registerTask('default', ['test']);
-};
+  // publishes to GitHub Pages
+  grunt.registerTask('publish', ['jekyll', 'autoprefixer:docs', 'buildcontrol:pages']);
+}

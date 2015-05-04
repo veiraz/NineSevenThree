@@ -1,13 +1,11 @@
-/**
- * Print Styles
- *
- * Source: https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css
- */
+// Print Styles
+//
+// Source: https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css
 
 @media print {
   * {
     background: transparent !important;
-    color: #000 !important; /* Black prints faster: h5bp.com/s */
+    color: #000 !important; // Black prints faster: h5bp.com/s
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -25,10 +23,10 @@
     content: " (" attr(title) ")";
   }
 
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
+  //
+  // Don't show links that are fragment identifiers,
+  // or use the `javascript:` pseudo protocol
+  //
 
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
@@ -42,7 +40,7 @@
     }
 
   thead {
-    display: table-header-group; /* h5bp.com/t */
+    display: table-header-group; // h5bp.com/t
   }
 
   tr,
