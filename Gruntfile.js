@@ -28,10 +28,10 @@ module.exports = function (grunt) {
         browsers: ['last 2 versions', 'ie 8', 'ie 9']
       },
       dist: {
-        src: 'css/*.css'
+        src: 'css/**/*.css'
       },
       docs: {
-        src: '_site/*.css'
+        src: '_site/**/*.css'
       }
     },
 
@@ -70,7 +70,7 @@ module.exports = function (grunt) {
   });
 
   // builds the page contents
-  grunt.registerTask('default', ['sass', 'jekyll', 'autoprefixer:dist']);
+  grunt.registerTask('default', ['sass', 'jekyll', 'autoprefixer']);
 
   // publishes to GitHub Pages
   grunt.registerTask('publish', ['jekyll', 'autoprefixer:docs', 'buildcontrol:pages']);
