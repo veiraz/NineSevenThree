@@ -30,6 +30,9 @@ node_modules
 # SASS Cache
 .sass-cache
 
+# Jekyll
+_site
+
 # =========================
 # Operating System Files
 # =========================
