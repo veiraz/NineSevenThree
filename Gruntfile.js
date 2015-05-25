@@ -51,21 +51,6 @@ module.exports = function (grunt) {
       docs: {
         dest: '_site'
       }
-    },
-
-    buildcontrol: {
-      options: {
-        dir: '_site',
-        commit: true,
-        push: true,
-        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-      },
-      pages: {
-        options: {
-          remote: 'git@github.com:resir014/NineSevenThree.git',
-          branch: 'gh-pages'
-        }
-      }
     }
 
   });
@@ -73,6 +58,4 @@ module.exports = function (grunt) {
   // builds the page contents
   grunt.registerTask('default', ['sass', 'jekyll', 'autoprefixer']);
 
-  // publishes to GitHub Pages
-  grunt.registerTask('publish', ['jekyll', 'autoprefixer:docs', 'buildcontrol:pages']);
 }

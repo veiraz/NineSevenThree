@@ -1,5 +1,7 @@
 # NineSevenThree
 
+*Note: This is a personal fork maintained by me, released under the same license. Refer to the upstream branch for the real thing.*
+
 NineSevenThree is a simplified, responsive CSS grid framework. It's originally a base framework designed for my future web projects, but I have decided to add some stuffs and release it for public use.
 
 It's still in early stage, and more things will be added in the future. In the meantime, feel free to use, fork and expand at your own risk.

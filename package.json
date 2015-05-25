@@ -2,7 +2,7 @@
   "private": true,
   "name": "NineSevenThree",
   "version": "0.5.1",
-  "description": "Simplified, responsive grid framework for HTML5 & CSS.",
+  "description": "Simplified, responsive grid framework for HTML5 & CSS",
   "homepage": "http://resir014.github.io/NineSevenThree/",
   "author": {
     "name": "Resi Respati",
@@ -10,15 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/resir014/NineSevenThree.git"
+    "url": "https://github.com/veiraz/NineSevenThree.git"
   },
-  "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-autoprefixer": "~2.2.0",
-    "grunt-build-control": "~0.2.0",
-    "grunt-jekyll": "~0.4.2",
-    "grunt-sass": "~0.18.0",
-    "grunt-contrib-watch": "~0.6.1",
-    "load-grunt-tasks": "~3.1.0"
+  "dependencies": {
+    "grunt": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-jekyll": "*",
+    "grunt-sass": "*",
+    "load-grunt-tasks": "*"
   }
 }
