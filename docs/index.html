@@ -19,7 +19,7 @@ title: Home
 
         <div class="row">
           <div class="col col-6">
-            <p>All columns of text are fully responsive. Go on, try it! Resize
+            <p>All columns of text are fully responsive. Go on, resize
             your browser!</p>
 
             <p>Boudin aliqua adipisicing rump corned beef. Nulla corned beef
@@ -53,6 +53,10 @@ title: Home
           </div>
         </div>
 
+      <div class="container">
+        <div class"row">
+          <div class="col col-6 col-push">
+
         <h3>Headings</h3>
 
         <h1>h1. Heading <small>Subheading</small></h1>
@@ -62,7 +66,9 @@ title: Home
         <h5>h5. Heading <small>Subheading</small></h5>
         <h6>h6. Heading <small>Subheading</small></h6>
 
-        <h2>Lists, Ordered Lists, and Description Lists</h2>
+          </div>
+          <div class="col col-6">
+        <h3>Lists, Ordered Lists, and Description Lists</h3>
 
         <ul>
           <li>Bacon ipsum dolor sit amet</li>
@@ -70,25 +76,15 @@ title: Home
           <li>Est magna in labore pig pork biltong</li>
           <li>
             Eiusmod swine spare ribs reprehenderit culpa:
-            <ul>
+            <ol>
+              <li><code>ol</code> under <code>ul</code></li>
               <li>Pork drumstick turkey fugiat</li>
               <li>Tri-tip elit turducken pork chop in</li>
               <li>Swine short ribs</li>
-            </ul>
+            </ol>
           </li>
           <li>Boudin aliqua adipisicing rump corned beef</li>
-          <li>Nulla corned beef sunt ball tip, qui bresaola enim jowl</li>
-          <li>Capicola short ribs minim salami nulla nostrud pastrami</li>
         </ul>
-
-        <ol>
-          <li>Bacon ipsum dolor sit amet</li>
-          <li>Aute in reprehenderit</li>
-          <li>Est magna in labore pig pork biltong</li>
-          <li>Boudin aliqua adipisicing rump corned beef</li>
-          <li>Nulla corned beef sunt ball tip, qui bresaola enim jowl</li>
-          <li>Capicola short ribs minim salami nulla nostrud pastrami</li>
-        </ol>
 
         <dl>
           <dt>Description lists</dt>
@@ -99,43 +95,48 @@ title: Home
           <dt>Swine short ribs</dt>
           <dd>Qui bresaola enim jowl</dd>
         </dl>
+          <li>Nulla corned beef sunt ball tip, qui bresaola enim jowl</li>
+          <li>Capicola short ribs minim salami nulla nostrud pastrami</li>
+          </div>
+        </div>
+      </section>
+      </div>
 
-    </section>
 
     <section id="grid-layout">
 
       <div class="container">
+        <div class="row">
+          <div class="col col-12">
         <h3>Grid Layouts</h3>
+
+        <h4>Basic grids</h4>
 
         <p>Standard, fluid responsive layouts.</p>
 
         <p>Currently only 3, 4, 6, 8, and 12 columns are available, but more
         will be added in the future. All column classes are in the format of
-        <code>.col-*</code>.</p>
-
-        <div class="row griddemo">
-          <div class="col col-12">
-            <span>.col-12</span>
+        <code>.col-*</code>. (You probably have known this, but make sure you
+        file them under <code>.col</code> too.)</p>
           </div>
         </div>
 
         <div class="row griddemo">
-          <div class="col col-8">
-            <span>.col-8</span>
+          <div class="col col-10">
+            <span>.col-10</span>
           </div>
-
-          <div class="col col-4">
-            <span>.col-4</span>
+          <div class="col col-2">
+            <span>.col-2</span>
           </div>
         </div>
 
         <div class="row griddemo">
-          <div class="col col-6">
-            <span>.col-6</span>
+          <div class="col col-7">
+            <span>.col-7</span>
           </div>
 
-          <div class="col col-6">
-            <span>.col-6</span>
+          <div class="col col-5">
+            <span>.col-5</span>
           </div>
         </div>
 
@@ -168,6 +169,74 @@ title: Home
 
           <div class="col col-3">
             <span>.col-3</span>
+          </div>
+        </div>
+
+        <div class="row griddemo">
+          <div class="col col-2">
+            <span>.col-2</span>
+          </div>
+
+          <div class="col col-2">
+            <span>.col-2</span>
+          </div>
+
+          <div class="col col-2">
+            <span>.col-2</span>
+          </div>
+
+          <div class="col col-2">
+            <span>.col-2</span>
+          </div>
+
+          <div class="col col-2">
+            <span>.col-2</span>
+          </div>
+
+          <div class="col col-2">
+            <span>.col-2</span>
+          </div>
+        </div>
+
+        <h4>Grid offset</h4>
+
+        <p>No more empty <code>.col-*</code>'s with <code>&amp;nbsp;</code>. In the
+        case you need some space (oh don't we all), just add
+        <code>.offset-*</code> and you're good to go.</p>
+
+        <div class="row griddemo">
+          <div class="col col-2 offset-10">
+            <span>.col-2 .offset-10</span>
+          </div>
+          </div>
+
+        <div class="row griddemo">
+          <div class="col col-2 offset-8">
+            <span>.col-2 .offset-8</span>
+          </div>
+          </div>
+
+        <div class="row griddemo">
+          <div class="col col-2 offset-6">
+            <span>.col-2 .offset-6</span>
+          </div>
+          </div>
+
+        <div class="row griddemo">
+          <div class="col col-2 offset-4">
+            <span>.col-2 .offset-4</span>
+          </div>
+          </div>
+
+        <div class="row griddemo">
+          <div class="col col-2 offset-2">
+            <span>.col-2 .offset-2</span>
+          </div>
+          </div>
+
+        <div class="row griddemo">
+          <div class="col col-2">
+            <span>.col-2</span>
           </div>
         </div>
 
@@ -175,9 +244,20 @@ title: Home
 
         <p>Pushing a column switches the position of the grid without sacrificing HTML hierarchy.</p>
 
+        <h5>With push</h5>
         <div class="row griddemo">
           <div class="col col-8 col-push">
             <span>.col-8 .push</span>
+          </div>
+          <div class="col col-4">
+            <span>.col-4</span>
+          </div>
+        </div>
+
+        <h5>Without push</h5>
+        <div class="row griddemo">
+          <div class="col col-8">
+            <span>.col-8</span>
           </div>
           <div class="col col-4">
             <span>.col-4</span>

@@ -32,6 +32,7 @@ node_modules
 
 # Jekyll
 _site
+css
 
 # =========================
 # Operating System Files
