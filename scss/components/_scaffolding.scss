@@ -16,7 +16,8 @@
   @include clearfix();
 }
 
-.col {
+[class*="offset-"],
+[class*="col-"] {
   position: relative;
   min-height: 1px;
   padding-right: $grid-gutter;
