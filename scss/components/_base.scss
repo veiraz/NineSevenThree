@@ -23,8 +23,12 @@ body {
   color: $body-color;
   background-color: $body-bg-color;
   font-family: $body-font;
-  font-size: $font-size;
+  font-size: ($font-size * .8);
   line-height: $line-height;
+
+  @media (min-width: 44rem) {
+    font-size: $font-size;
+  }
 }
 
 a {
