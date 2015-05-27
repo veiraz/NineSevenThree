@@ -20,12 +20,12 @@
   padding-right: $grid-gutter;
   padding-left: $grid-gutter;
 
-  @media (min-width: 36rem) {
+  @media (min-width: 55rem) {
     float: left;
   }
 }
 
-@media (min-width: 36rem) {
+@media (min-width: 55rem) {
   .col-full,
   .col-twelve { width: gridcalc(100%, 12, 12) }
   .col-eleven { width: gridcalc(100%, 12, 11) }
