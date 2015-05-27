@@ -2,8 +2,16 @@
 
 This is a personal fork of the original
 [NineSevenThree](https://github.com/resir014/NineSevenThree)
-maintained by me, released under the same license. Refer to it for general
-build instruction.
+maintained by me, released under the same license. <s>Refer to it for general
+build instruction.</s>
+
+Build system has been changed to gulp, to compile (This assumes you have
+a working node.js intallation):
+
+    npm i -g gulp
+    # On the root of the directory
+    npm i
+    gulp
 
 ## What has been changed:
 
