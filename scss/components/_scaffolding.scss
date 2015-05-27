@@ -1,8 +1,5 @@
-/**
+/*
  * Grid system
- *
- * 12 columns, fully responsive. Class names based on Bootstrap's grid system,
- * column widths based on <http://adamkaplan.me/grid>
  */
 
 .container {
@@ -29,31 +26,38 @@
 }
 
 @media (min-width: 36rem) {
-  .col-12 { width: calc(100%) }
-  .col-11 { width: calc(100%/(12/11)) }
-  .col-10 { width: calc(100%/(12/10)) }
-  .col-9  { width: calc(100%/(12/9)) }
-  .col-8  { width: calc(100%/(12/8)) }
-  .col-7  { width: calc(100%/(12/7)) }
-  .col-6  { width: calc(100%/(12/6)) }
-  .col-5  { width: calc(100%/(12/5)) }
-  .col-4  { width: calc(100%/(12/4)) }
-  .col-3  { width: calc(100%/(12/3)) }
-  .col-2  { width: calc(100%/(12/2)) }
-  .col-1  { width: calc(100%/12) }
+  .col-full,
+  .col-twelve { width: gridcalc(100%, 12, 12) }
+  .col-eleven { width: gridcalc(100%, 12, 11) }
+  .col-ten   { width: gridcalc(100%, 12, 10) }
+  .col-nine  { width: gridcalc(100%, 12, 9) }
+  .col-eight { width: gridcalc(100%, 12, 8) }
+  .col-seven { width: gridcalc(100%, 12, 7) }
+  .col-half,
+  .col-six   { width: gridcalc(100%, 12, 6) }
+  .col-five  { width: gridcalc(100%, 12, 5) }
+  .col-one-third,
+  .col-four  { width: gridcalc(100%, 12, 4) }
+  .col-one-fourth,
+  .col-three { width: gridcalc(100%, 12, 3) }
+  .col-two   { width: gridcalc(100%, 12, 2) }
+  .col-one   { width: gridcalc(100%, 12, 1) }
 
-  .offset-11 { margin-left: calc(100%/(12/11)) }
-  .offset-10 { margin-left: calc(100%/(12/10)) }
-  .offset-9  { margin-left: calc(100%/(12/9)) }
-  .offset-8  { margin-left: calc(100%/(12/8)) }
-  .offset-7  { margin-left: calc(100%/(12/7)) }
-  .offset-6  { margin-left: calc(100%/(12/6)) }
-  .offset-5  { margin-left: calc(100%/(12/5)) }
-  .offset-4  { margin-left: calc(100%/(12/4)) }
-  .offset-3  { margin-left: calc(100%/(12/3)) }
-  .offset-2  { margin-left: calc(100%/(12/2)) }
-  .offset-1  { margin-left: calc(100%/12) }
+  .offset-eleven { margin-left: gridcalc(100%, 12, 11) }
+  .offset-ten   { margin-left: gridcalc(100%, 12, 10) }
+  .offset-nine  { margin-left: gridcalc(100%, 12, 9) }
+  .offset-eight { margin-left: gridcalc(100%, 12, 8) }
+  .offset-seven { margin-left: gridcalc(100%, 12, 7) }
+  .offset-half,
+  .offset-six   { margin-left: gridcalc(100%, 12, 6) }
+  .offset-five  { margin-left: gridcalc(100%, 12, 5) }
+  .offset-one-third,
+  .offset-four  { margin-left: gridcalc(100%, 12, 4) }
+  .offset-one-fourth,
+  .offset-three { margin-left: gridcalc(100%, 12, 3) }
+  .offset-two   { margin-left: gridcalc(100%, 12, 2) }
+  .offset-one   { margin-left: gridcalc(100%, 12, 1) }
 
-  .col-push { float: right }
+  .push { float: right }
 }
 

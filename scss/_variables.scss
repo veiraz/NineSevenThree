@@ -1,19 +1,26 @@
-$container-width: 60rem !default;
-$grid-gutter:     1rem !default;
+/* Base */
+$base-font-size: 62.5% !default;
+$container-width: 96rem !default;
+$grid-gutter:     1.5rem !default;
 
-/* Primary colors */
-$color-blue:       #3b98b2 !default;
-$color-gray-light: #888    !default;
-$color-gray:       #555    !default;
-$color-gray-dark:  #222    !default;
-$btn-color-white:  #fff    !default;
+/* Typography
+ *
+ * The 62.5% size assumes the default font-size value of 16px, sizing it down
+ * to  about 10px for easier calculations. Since it only scales down relatively
+ * it shoud not affect the readability of the visually impaired.
+ */
+$body-font: "Helvetica Neue", Helvetica, 'Arimo', sans-serif !default;
+$mono-font: 'Consolas', "Liberation Mono", 'Menlo', Courier, monospace !default;
+$font-size:      1.6rem !default;
+$line-height:    1.5 !default;
 
-/* Font stack */
-$body-font: "Helvetica Neue", Helvetica, Arimo, sans-serif !default;
+/* Colors */
+$body-color:   #444 !default;
+$body-bg-color:      #fff !default;
+$link-color:      #0066bb !default;
 
-/* The base body size */
-$body-font-size: 1rem !default;
-$line-height: 1.5 !default;
+/* Functions */
+@function gridcalc($container-width, $total-columns, $column-num) {
+  @return $container-width / ( $total-columns / $column-num )
+}
 
-/* Monospace font stack */
-$mono-font: Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
