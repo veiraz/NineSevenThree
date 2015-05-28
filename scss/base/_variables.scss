@@ -1,0 +1,17 @@
+$base-font-size:   62.5%  !default;
+$container-width:  96rem  !default;
+$grid-gutter:      1.5rem !default;
+$breakpoint:       44rem  !default;
+
+$body-font:        'Helvetica Neue', 'Arimo', sans-serif !default;
+$mono-font:        'Menlo', monospace !default;
+$font-size:        1.6rem !default;
+$line-height:      1.5 !default;
+
+$body-color:       #333 !default;
+$body-bg-color:    #fff !default;
+$link-color:       #0066bb !default;
+
+@function gridcalc($total-columns, $column-num) {
+  @return 100% / ( $total-columns / $column-num )
+}

@@ -1,11 +1,13 @@
-/* Import foundational styles */
-@import "normalize";
-@import "variables";
-@import "mixins";
-@import "print";
+@import "base/normalize";
+@import "base/mixins";
+@import "base/variables";
 
-/* Import base components */
-@import "components/base";
-@import "components/scaffolding";
-@import "components/type";
+@import "grids/base";
+@import "grids/grids";
+@import "grids/helpers";
 
+@import "style/typography";
+@import "style/list";
+@import "style/forms";
+@import "style/buttons";
+@import "style/print";

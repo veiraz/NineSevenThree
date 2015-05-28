@@ -1,0 +1,58 @@
+.container {
+  padding: 0 $grid-gutter;
+  margin: 0 auto;
+  max-width: $container-width;
+}
+
+.row {
+  margin: 0 (-$grid-gutter);
+  @include clearfix();
+}
+
+[class*="offset-"],
+[class*="col-"] {
+  position: relative;
+  min-height: 1px;
+  padding-right: $grid-gutter;
+  padding-left: $grid-gutter;
+
+  @media (min-width: $breakpoint) {
+    float: left;
+  }
+}
+
+@media (min-width: $breakpoint) {
+  .col-full,
+  .col-twelve { width: gridcalc(12, 12) }
+  .col-eleven { width: gridcalc(12, 11) }
+  .col-ten    { width: gridcalc(12, 10) }
+  .col-nine   { width: gridcalc(12, 9) }
+  .col-eight  { width: gridcalc(12, 8) }
+  .col-seven  { width: gridcalc(12, 7) }
+  .col-half,
+  .col-six    { width: gridcalc(12, 6) }
+  .col-five   { width: gridcalc(12, 5) }
+  .col-one-third,
+  .col-four   { width: gridcalc(12, 4) }
+  .col-one-fourth,
+  .col-three  { width: gridcalc(12, 3) }
+  .col-two    { width: gridcalc(12, 2) }
+  .col-one    { width: gridcalc(12, 1) }
+
+  .offset-eleven { margin-left: gridcalc(12, 11) }
+  .offset-ten    { margin-left: gridcalc(12, 10) }
+  .offset-nine   { margin-left: gridcalc(12, 9) }
+  .offset-eight  { margin-left: gridcalc(12, 8) }
+  .offset-seven  { margin-left: gridcalc(12, 7) }
+  .offset-half,
+  .offset-six    { margin-left: gridcalc(12, 6) }
+  .offset-five   { margin-left: gridcalc(12, 5) }
+  .offset-one-third,
+  .offset-four   { margin-left: gridcalc(12, 4) }
+  .offset-one-fourth,
+  .offset-three  { margin-left: gridcalc(12, 3) }
+  .offset-two    { margin-left: gridcalc(12, 2) }
+  .offset-one    { margin-left: gridcalc(12, 1) }
+
+  .push { float: right }
+}

@@ -1,4 +1,4 @@
-# NineSevenThree
+# thirtyone
 
 This is a personal fork of the original
 [NineSevenThree](https://github.com/resir014/NineSevenThree)
@@ -13,7 +13,7 @@ a working node.js intallation):
     npm i
     gulp
 
-## What has been changed:
+### What has been changed:
 
 * Grid calculation is now done with a SASS function rather than a set width
   for easy maintaining
@@ -29,17 +29,23 @@ a working node.js intallation):
   * `col-one`
   * `col-two`
   * `col-three`
-* There's also the addition of a few shorthands, such as `col-one-third`,
-  `col-half`, etc
-* Also you no longer need to file columns under `col`
-* All styles has been ripped out. I will be ading them soon, but as of now,
+
+
+* There's also the addition of a few shorthands, such as `col-one-third`, `col-half`, etc.
+* Also you no longer need to file under `col`
+* All styles has been ripped out. I will be adding them soon, but as of now,
   there are none
 * Updated dependencies
 * Other various cleanups
 
-## To-do:
+### To-do:
 
 * Typographic styling
 * General styling
 * Better documentation
 
+
+### What's with the name?
+
+    $ echo "sqrt( 973 )" | bc
+    31
