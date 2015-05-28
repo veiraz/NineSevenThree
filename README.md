@@ -30,10 +30,9 @@ a working node.js intallation):
   * `col-two`
   * `col-three`
 
-
-* There's also the addition of a few shorthands, such as `col-one-third`, `col-half`, etc.
-* Also you no longer need to file under `col`
-* All styles has been ripped out. I will be adding them soon, but as of now,
+* Few shorthands were added, like `col-half`, `col-one-third`, etc.
+* Also you no longer need to file columns under `col`
+* All styles has been ripped out. I will be adding them soon, but as of now
   there are none
 * Updated dependencies
 * Other various cleanups
