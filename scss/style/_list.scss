@@ -1,11 +1,21 @@
+ul {
+  list-style-type: circle;
+}
+
 ul,
 ol {
+  padding-left: 1em;
+
+  li {
+    margin-bottom: .6rem;
+  }
 }
 
 ul ul,
 ol ul,
 ul ol,
 ol ol {
+  padding-left: 2em;
 }
 
 dl {
@@ -16,13 +26,10 @@ dd {
 }
 
 dt {
+  font-weight: bold;
 }
 
 dd {
-}
-
-.list-inline {
-}
-
-.list-inline > li {
+  margin-left: 0;
+  margin-bottom: 1rem;
 }

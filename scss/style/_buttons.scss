@@ -1,0 +1,44 @@
+[class*="btn"] {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  border-style: solid;
+  border-radius: .3rem;
+  border-width: .1rem;
+  padding-top: .6rem;
+  padding-bottom: .6rem;
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+  margin-right: .6rem;
+  margin-bottom: 1rem;
+  @include animate();
+}
+
+.btn {
+  color: lighten( $body-color, 20% );
+  background-color: transparent;
+  border-color: lighten( $body-color, 45% );
+
+  &:hover {
+    color: #fff;
+    background-color: lighten( $body-color, 45% );
+  }
+
+  &-important {
+    color: #fff;
+    background-color: $link-color;
+    border-color: $link-color;
+
+    &:hover {
+      background-color: darken( $link-color, 15% );
+      border-color: darken( $link-color, 15% );
+    }
+  }
+
+  &-disabled {
+    color: lighten( $body-color, 45% );
+    background-color: lighten( $body-color, 65% );
+    border-color: lighten( $body-color, 65% );
+    cursor: not-allowed;
+  }
+}
